@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!200 &20000000
+ShaderVariantCollection:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Shader Bindings
+  m_Shaders:
+  - first: {fileID: 4800000, guid: 3120ff9b0a4f411468943f8528b1e682, type: 3}
+    second:
+      variants:
+      - keywords: _EMISSION
+        passType: 0
+      - keywords: _ALPHATEST_ON _GLOSSYREFLECTIONS_OFF _SPECULARHIGHLIGHTS_OFF
+        passType: 0
+  - first: {fileID: 4800000, guid: bb4eebdbc4c134340a874b409dec2239, type: 3}
+    second:
+      variants: []
+  - first: {fileID: 4800000, guid: 87886ad57ba933c44b128efca79fe422, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 4800000, guid: 63fa51b9a2f585d4f94ed046e2e3f344, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 4800000, guid: 6e4cb585c4242ca43a35b71d3c73f962, type: 3}
+    second:
+      variants:
+      - keywords: _ALPHATEST_ON _GLOSSYREFLECTIONS_OFF _SPECULARHIGHLIGHTS_OFF
+        passType: 0

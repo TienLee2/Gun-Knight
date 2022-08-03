@@ -1,0 +1,344 @@
+﻿#pragma kernel QuadroRendererGPUFrustumCullingLOD
+
+#include "Include/ShadowUtility.compute"
+#include "Include/Culling.compute"
+
+struct IndirectShaderData
+{
+	float4x4 positionMatrix;
+	float4x4 inversePositionMatrix;
+	float4 lodFade;
+};
+
+uniform uint instanceCount;
+uniform bool isFrustumCulling;
+
+//Used for frustum culling
+uniform float4 cameraFrustumPlane0;
+uniform float4 cameraFrustumPlane1;
+uniform float4 cameraFrustumPlane2;
+uniform float4 cameraFrustumPlane3;
+uniform float4 cameraFrustumPlane4;
+uniform float4 cameraFrustumPlane5;
+uniform float4 worldSpaceCameraPos;
+
+uniform float4 floatingOriginOffset;
+
+uniform float boundingSphereRadius;
+uniform float maxDistance;
+uniform float minDistance;
+
+//Used for LODs
+uniform bool useLODFade;
+uniform bool lodFadeForLastLOD;
+uniform float LODFadeDistance;
+
+uniform int getAdditionalShadow;
+uniform float shadowDistance;
+uniform float minCullingDistance;
+uniform float increaseBoundingSphereForShadows;
+
+uniform float3 directionLight;
+uniform float3 boundsSize;
+
+uniform uint LODCount;
+uniform uint startLOD;
+uniform float4x4 lodDistances;
+
+StructuredBuffer<float4x4> positions;
+AppendStructuredBuffer<IndirectShaderData> positionLOD0;
+AppendStructuredBuffer<IndirectShaderData> positionLOD1;
+AppendStructuredBuffer<IndirectShaderData> positionLOD2;
+AppendStructuredBuffer<IndirectShaderData> positionLOD3;
+
+AppendStructuredBuffer<IndirectShaderData> positionShadowLOD0;
+AppendStructuredBuffer<IndirectShaderData> positionShadowLOD1;
+AppendStructuredBuffer<IndirectShaderData> positionShadowLOD2;
+AppendStructuredBuffer<IndirectShaderData> positionShadowLOD3;
+
+float4x4 Inverse(float4x4 input)
+{
+	#define minor(a,b,c) determinant(float3x3(input.a, input.b, input.c))
+
+	float4x4 cofactors = float4x4(
+		minor(_22_23_24, _32_33_34, _42_43_44),
+		-minor(_21_23_24, _31_33_34, _41_43_44),
+		minor(_21_22_24, _31_32_34, _41_42_44),
+		-minor(_21_22_23, _31_32_33, _41_42_43),
+
+		-minor(_12_13_14, _32_33_34, _42_43_44),
+		minor(_11_13_14, _31_33_34, _41_43_44),
+		-minor(_11_12_14, _31_32_34, _41_42_44),
+		minor(_11_12_13, _31_32_33, _41_42_43),
+
+		minor(_12_13_14, _22_23_24, _42_43_44),
+		-minor(_11_13_14, _21_23_24, _41_43_44),
+		minor(_11_12_14, _21_22_24, _41_42_44),
+		-minor(_11_12_13, _21_22_23, _41_42_43),
+
+		-minor(_12_13_14, _22_23_24, _32_33_34),
+		minor(_11_13_14, _21_23_24, _31_33_34),
+		-minor(_11_12_14, _21_22_24, _31_32_34),
+		minor(_11_12_13, _21_22_23, _31_32_33)
+		);
+	#undef minor
+	return transpose(cofactors) / determinant(input);
+}
+
+void CalculateLODFade(float cameraDistance, uint nextLOD, out float4 lodFade)
+{
+	lodFade = float4(0, 0, 0, 0);
+	float fade = 0;
+
+	float nextLODDistance = lodDistances[nextLOD / 4][nextLOD % 4];
+    float distance = nextLODDistance - cameraDistance;
+
+    if (distance <= LODFadeDistance)
+    {
+        fade = clamp(distance / LODFadeDistance, 0, 1);
+
+		if(fade != 0)
+		{
+			float lodFadeQuantified = 1 - clamp(round(fade * 16) / 16, 0.0625, 1);
+			lodFade = float4(fade, lodFadeQuantified, 0, 0);
+		}
+    }
+}
+
+void CalculateLOD(float distanceToCamera, out uint lod, out float4 lodFade)
+{
+    lod = 9;
+	lodFade = float4(0, 0, 0, 0);
+
+    for (uint i = startLOD; i < LODCount; i++)
+    {
+        if (distanceToCamera <= lodDistances[i / 4][i % 4])
+        {
+            lod = i;
+
+			if(i != LODCount - 1)
+			{
+				if (useLODFade)
+        		{
+					if(lodFadeForLastLOD)
+					{
+						if(i == LODCount - 2)
+						{
+        					CalculateLODFade(distanceToCamera, i, lodFade);
+						}
+					}
+					else
+					{
+						CalculateLODFade(distanceToCamera, i, lodFade);
+					}
+				}
+			}
+
+            break;
+        }
+    }
+}
+
+void CalculateLODWithoutLODFade(float distanceToCamera, out uint lod)
+{
+    lod = 9;
+
+    for (uint i = startLOD; i < LODCount; i++)
+    {
+		uint nextLOD = i + 1;
+        if (distanceToCamera <= lodDistances[nextLOD / 4][nextLOD % 4])
+        {
+            lod = i;
+
+            break;
+        }
+    }
+}
+
+bool AddAdditionalShadow(float distanceToCamera, float3 position)
+{
+    if(distanceToCamera > shadowDistance)
+    {
+        return false;
+    }
+
+    switch (getAdditionalShadow)
+    {
+        case 1: //GetAdditionalShadow.MinCullingDistance:
+        {
+            if(distanceToCamera <= minCullingDistance)
+            {
+				return true;
+            }
+
+            break;
+        }
+        case 2: //GetAdditionalShadow.IncreaseBoundingSphere:
+        {
+			if(FrustumCulling(position, cameraFrustumPlane0, cameraFrustumPlane1, cameraFrustumPlane2, 
+				cameraFrustumPlane3, cameraFrustumPlane4, cameraFrustumPlane5, boundingSphereRadius, increaseBoundingSphereForShadows) == false)
+			{
+                return true;
+			}
+
+            break;
+        }
+		case 3: //DirectionLightShadowVisible
+		{
+			Bounds bounds;
+			bounds.center = position;
+			bounds.extents = boundsSize / 2;
+
+			float3 planeOrigin = float3(0, position.y - boundsSize.y, 0);
+
+			if (IsShadowVisible(bounds, directionLight, planeOrigin, cameraFrustumPlane0, cameraFrustumPlane1, cameraFrustumPlane2, 
+				cameraFrustumPlane3, cameraFrustumPlane4, cameraFrustumPlane5))
+			{
+				return true;
+			}
+
+			break;
+		}
+    }
+
+	return false;
+}
+
+float GetDistanceToCamera(IndirectShaderData instanceData)
+{
+	float3 itempos = instanceData.positionMatrix._m03_m13_m23;
+    return distance(itempos, worldSpaceCameraPos.xyz);
+}
+
+void AddPosition(IndirectShaderData instanceData, uint lodIndex, float4 lodFade)
+{
+	instanceData.lodFade = lodFade;
+	
+	switch (lodIndex)
+    {
+        case 0: 
+        {
+			positionLOD0.Append(instanceData);
+
+            break;
+        }
+        case 1:
+        {
+			positionLOD1.Append(instanceData);
+
+            break;
+        }
+		case 2:
+        {
+			positionLOD2.Append(instanceData);
+
+            break;
+        }
+		case 3:
+        {
+			positionLOD3.Append(instanceData);
+
+            break;
+        }
+    }
+}
+
+void AddPositionShadow(IndirectShaderData instanceData, float distanceToCamera, uint lodIndex, float4 lodFade)
+{
+	if(distanceToCamera > shadowDistance)
+    {
+        return;
+    }
+
+	instanceData.lodFade = lodFade;
+
+	switch (lodIndex)
+    {
+        case 0: 
+        {
+			positionShadowLOD0.Append(instanceData);
+            break;
+        }
+        case 1:
+        {
+			positionShadowLOD1.Append(instanceData);
+            break;
+        }
+		case 2:
+        {
+			positionShadowLOD2.Append(instanceData);
+            break;
+        }
+		case 3:
+        {
+			positionShadowLOD3.Append(instanceData);
+            break;
+        }
+    }
+}
+
+[numthreads(512, 1, 1)]
+void QuadroRendererGPUFrustumCullingLOD(uint3 id : SV_DispatchThreadID)
+{
+	uint instanceId = id.x;
+
+	if (instanceId >= instanceCount)
+	{
+		return;
+	}
+
+	IndirectShaderData instanceData;
+	instanceData.positionMatrix = positions[instanceId];
+	instanceData.positionMatrix._m03_m13_m23 += floatingOriginOffset.xyz;
+	
+	float distanceToCamera = GetDistanceToCamera(instanceData);
+
+	if(DistanceCulling(distanceToCamera, maxDistance, minDistance))
+	{
+		return;
+	}
+
+	uint lod;
+	float4 lodFade;
+	
+	#define transformPosition mul(instanceData.positionMatrix, float4(0,0,0,1)).xyz
+	float3 position = transformPosition + float3(0.0f, boundingSphereRadius * 0.5f, 0.0f);
+	
+	if (isFrustumCulling && FrustumCulling(position, cameraFrustumPlane0, cameraFrustumPlane1, cameraFrustumPlane2, 
+			cameraFrustumPlane3, cameraFrustumPlane4, cameraFrustumPlane5, boundingSphereRadius, 0))
+	{
+		if(AddAdditionalShadow(distanceToCamera, position))
+		{
+			instanceData.inversePositionMatrix = Inverse(instanceData.positionMatrix);
+
+			CalculateLODWithoutLODFade(distanceToCamera, lod);
+
+			uint lodIndex = LODCount > 4 ? lod - startLOD : lod;
+
+			AddPositionShadow(instanceData, distanceToCamera, lodIndex, float4(0, 0, 0, 0));
+		}
+
+		return;
+	}
+
+	instanceData.inversePositionMatrix = Inverse(instanceData.positionMatrix);
+
+	CalculateLOD(distanceToCamera, lod, lodFade);
+
+	if(lod != 9)
+	{
+		if(useLODFade)
+        {
+			if(lodFade.x != 0)
+			{
+				AddPositionShadow(instanceData, distanceToCamera, lod + 1, float4(0, 0, 0, 0));
+				AddPosition(instanceData, lod + 1, float4(0, 0, 0, 0));
+			}
+		}
+
+		uint lodIndex = LODCount > 4 ? lod - startLOD : lod; 
+
+		AddPositionShadow(instanceData, distanceToCamera, lodIndex, lodFade);
+		AddPosition(instanceData, lodIndex, lodFade);
+	}
+}

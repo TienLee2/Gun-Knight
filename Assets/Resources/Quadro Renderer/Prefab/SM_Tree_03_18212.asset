@@ -1,0 +1,72 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f1be61bbc6459d42bc42f2fdb17ebef, type: 3}
+  m_Name: SM_Tree_03_18212
+  m_EditorClassIdentifier: 
+  Selected: 0
+  PrefabObject: {fileID: 3061657678458937843, guid: 57aa4a19b4bf70244a5ff752396846c6,
+    type: 3}
+  Bounds:
+    m_Center: {x: 192.14854, y: 14.566259, z: 93.650215}
+    m_Extent: {x: 1.5909424, y: 3.1070862, z: 1.4156494}
+  ID: 18212
+  GeneralSettings:
+    RenderMode: 1
+    LightProbeUsage: 1
+    ActiveRenderer: 1
+  ShadowsSettings:
+    IsShadowCasting: 1
+    UseCustomShadowDistance: 0
+    _shadowDistance: 300
+    ShadowLODMap: 0000000001000000020000000300000004000000050000000600000007000000
+    DrawShadowLODMap: 0101010101010101
+    ShadowWithOriginalShaderLODMap: 0101010101010101
+  CullingSettings:
+    _maxDistance: 2000
+    _minCullingDistance: 50
+    IsFrustumCulling: 1
+    GetAdditionalShadow: 3
+    IncreaseBoundingSphere: 7
+    IncreaseShadowsBoundingSphere: 0
+  LODSettings:
+    _isLODCrossFade: 0
+    LodBias: 1
+    LodFadeTransitionDistance: 10
+    LodFadeForLastLOD: 1
+  BillboardSettings:
+    UseHueVariation: 0
+    NormalInvert: 0
+    TranslucencyColor: {r: 0, g: 0, b: 0, a: 1}
+    ShadowStrength: 0.7
+    HealthyColor: {r: 1, g: 1, b: 1, a: 1}
+    DryColor: {r: 0.85, g: 0.85, b: 0.75, a: 1}
+    ColorNoiseSpread: 50
+    UseGeneratedBillboard: 0
+    BillboardGeneratorAction: 0
+    BillboardQuality: 1
+    AtlasResolution: 8192
+    FrameCount: 16
+    Color: {r: 0.83, g: 0.83, b: 0.83, a: 1}
+    CutOffOverride: 0.5
+    BillboardFaceCamPos: 0
+    TEXT_BillboardQualityOptions:
+    - Low (1024)
+    - Mid (2048)
+    - High (4096)
+    - Very High (8192)
+    BillboardBrightness: 1
+    AlbedoAtlasTexture: {fileID: 0}
+    NormalAtlasTexture: {fileID: 0}
+    QuadSize: 0
+    YPivotOffset: 0
+  TreeType: 0
+  WarningText: 

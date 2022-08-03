@@ -1,0 +1,2059 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2667aae7eaa2da44eb7c5015b5d2be5a, type: 3}
+  m_Name: New Type 2
+  m_EditorClassIdentifier: 
+  TypeName: Default
+  Selected: 0
+  ResourceType: 3
+  ProtoQuadroItemList:
+  - prefab: {fileID: 7296415781553016025, guid: a9d681a8472277b479d42c5ae7630f14,
+      type: 3}
+    selected: 0
+    active: 1
+    ID: 95580
+    Extents: {x: 0.68595886, y: 0.2394886, z: 0.6842804}
+    AdditionalSpawnSettings:
+      Success: 100
+      SuccessForErase: 100
+      AdditionalSpawnSettingsEditor:
+        success:
+          m_Text: Success (%)
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        successForErase:
+          m_Text: Success of Erase (%)
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+    FailureSettings:
+      Enable: 1
+      FailureRateFromFitness:
+        blendMode: 0
+        keys:
+        - colour: {r: 0, g: 0, b: 0, a: 1}
+          time: 0
+        - colour: {r: 1, g: 1, b: 1, a: 1}
+          time: 1
+      FailureRate: 80
+      FailureSettingsEditor:
+        failureSettingsFoldout: 1
+    OverlapCheckSettings:
+      OverlapShape: 2
+      BoundsCheck:
+        boundsType: 1
+        uniformBoundsSize: 0
+        boundsSize: {x: 1, y: 1, z: 1}
+        multiplyBoundsSize: 1
+      SphereCheck:
+        vegetationMode: 1
+        size: 3.5
+        priority: 0
+        viabilitySize: 4
+        trunkSize: 0.8
+      CollisionCheck:
+        multiplyBoundsSize: 1
+        collisionCheckType: 0
+        checkCollisionLayers:
+          serializedVersion: 2
+          m_Bits: 0
+      "Overlap\u0421heckTypeEditor":
+        "overlap\u0421heckFoldout": 1
+    TransformComponentsStack:
+      TransformComponents: []
+    SimpleFilterSettings:
+      CheckHeight: 0
+      CheckSlope: 0
+      MinHeight: 0
+      MaxHeight: 0
+      HeightFalloffType: 1
+      HeightFalloffMinMax: 0
+      MinAddHeightFalloff: 20
+      MaxAddHeightFalloff: 20
+      AddHeightFalloff: 20
+      HeightNoiseFractal:
+        noiseType: 0
+        seed: 0
+        octaves: 3
+        frequency: 0.03
+        lacunarity: 2
+        persistence: 0.5
+      HeightNoise: 0
+      _maxRangeNoise: 5
+      _minRangeNoise: 5
+      MinSlope: 0
+      MaxSlope: 20
+      SlopeFalloffType: 1
+      SlopeFalloffMinMax: 1
+      MinAddSlopeFalloff: 30
+      MaxAddSlopeFalloff: 30
+      AddSlopeFalloff: 30
+      NoiseTexture: {fileID: 0}
+      Fractal:
+        noiseType: 0
+        seed: 0
+        octaves: 3
+        frequency: 0.03
+        lacunarity: 2
+        persistence: 0.5
+      RangeMin: -0.5
+      RangeMax: 0.5
+      CheckGlobalFractalNoise: 0
+      NoisePreviewTexture: 0
+      RemapNoiseMin: 0
+      RemapNoiseMax: 1
+      Invert: 0
+      SimpleFilterSettingsEditor:
+        viabilitySettingsFoldout: 1
+        additionalNoiseSettingsFoldout: 1
+    SimpleEraseFilterSettings:
+      CheckHeight: 0
+      CheckSlope: 0
+      MinHeight: 0
+      MaxHeight: 0
+      HeightFalloffType: 1
+      HeightFalloffMinMax: 0
+      MinAddHeightFalloff: 20
+      MaxAddHeightFalloff: 20
+      AddHeightFalloff: 20
+      HeightNoiseFractal:
+        noiseType: 0
+        seed: 0
+        octaves: 3
+        frequency: 0.03
+        lacunarity: 2
+        persistence: 0.5
+      HeightNoise: 0
+      _maxRangeNoise: 5
+      _minRangeNoise: 5
+      MinSlope: 0
+      MaxSlope: 20
+      SlopeFalloffType: 1
+      SlopeFalloffMinMax: 1
+      MinAddSlopeFalloff: 30
+      MaxAddSlopeFalloff: 30
+      AddSlopeFalloff: 30
+      NoiseTexture: {fileID: 0}
+      Fractal:
+        noiseType: 0
+        seed: 0
+        octaves: 3
+        frequency: 0.03
+        lacunarity: 2
+        persistence: 0.5
+      RangeMin: -0.5
+      RangeMax: 0.5
+      CheckGlobalFractalNoise: 0
+      NoisePreviewTexture: 0
+      RemapNoiseMin: 0
+      RemapNoiseMax: 1
+      Invert: 0
+      SimpleFilterSettingsEditor:
+        viabilitySettingsFoldout: 1
+        additionalNoiseSettingsFoldout: 1
+    SimpleModifyFilterSettings:
+      CheckHeight: 0
+      CheckSlope: 0
+      MinHeight: 0
+      MaxHeight: 0
+      HeightFalloffType: 1
+      HeightFalloffMinMax: 0
+      MinAddHeightFalloff: 20
+      MaxAddHeightFalloff: 20
+      AddHeightFalloff: 20
+      HeightNoiseFractal:
+        noiseType: 0
+        seed: 0
+        octaves: 3
+        frequency: 0.03
+        lacunarity: 2
+        persistence: 0.5
+      HeightNoise: 0
+      _maxRangeNoise: 5
+      _minRangeNoise: 5
+      MinSlope: 0
+      MaxSlope: 20
+      SlopeFalloffType: 1
+      SlopeFalloffMinMax: 1
+      MinAddSlopeFalloff: 30
+      MaxAddSlopeFalloff: 30
+      AddSlopeFalloff: 30
+      NoiseTexture: {fileID: 0}
+      Fractal:
+        noiseType: 0
+        seed: 0
+        octaves: 3
+        frequency: 0.03
+        lacunarity: 2
+        persistence: 0.5
+      RangeMin: -0.5
+      RangeMax: 0.5
+      CheckGlobalFractalNoise: 0
+      NoisePreviewTexture: 0
+      RemapNoiseMin: 0
+      RemapNoiseMax: 1
+      Invert: 0
+      SimpleFilterSettingsEditor:
+        viabilitySettingsFoldout: 1
+        additionalNoiseSettingsFoldout: 1
+    EraseMaskFilterStack:
+      Filters: []
+    MaskFilterStack:
+      Filters: []
+    ModifyMaskFilterStack:
+      Filters: []
+    FilterMaskTexture2D: {fileID: 0}
+  - prefab: {fileID: 7995521904660371063, guid: bf17c254772df864d94f64fdefe03b95,
+      type: 3}
+    selected: 0
+    active: 1
+    ID: 95600
+    Extents: {x: 0.26213837, y: 0.45118332, z: 0.20429993}
+    AdditionalSpawnSettings:
+      Success: 100
+      SuccessForErase: 100
+      AdditionalSpawnSettingsEditor:
+        success:
+          m_Text: Success (%)
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        successForErase:
+          m_Text: Success of Erase (%)
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+    FailureSettings:
+      Enable: 1
+      FailureRateFromFitness:
+        blendMode: 0
+        keys:
+        - colour: {r: 0, g: 0, b: 0, a: 1}
+          time: 0
+        - colour: {r: 1, g: 1, b: 1, a: 1}
+          time: 1
+      FailureRate: 80
+      FailureSettingsEditor:
+        failureSettingsFoldout: 1
+    OverlapCheckSettings:
+      OverlapShape: 2
+      BoundsCheck:
+        boundsType: 1
+        uniformBoundsSize: 0
+        boundsSize: {x: 1, y: 1, z: 1}
+        multiplyBoundsSize: 1
+      SphereCheck:
+        vegetationMode: 1
+        size: 3.5
+        priority: 0
+        viabilitySize: 4
+        trunkSize: 0.8
+      CollisionCheck:
+        multiplyBoundsSize: 1
+        collisionCheckType: 0
+        checkCollisionLayers:
+          serializedVersion: 2
+          m_Bits: 0
+      "Overlap\u0421heckTypeEditor":
+        "overlap\u0421heckFoldout": 1
+    TransformComponentsStack:
+      TransformComponents: []
+    SimpleFilterSettings:
+      CheckHeight: 0
+      CheckSlope: 0
+      MinHeight: 0
+      MaxHeight: 0
+      HeightFalloffType: 1
+      HeightFalloffMinMax: 0
+      MinAddHeightFalloff: 20
+      MaxAddHeightFalloff: 20
+      AddHeightFalloff: 20
+      HeightNoiseFractal:
+        noiseType: 0
+        seed: 0
+        octaves: 3
+        frequency: 0.03
+        lacunarity: 2
+        persistence: 0.5
+      HeightNoise: 0
+      _maxRangeNoise: 5
+      _minRangeNoise: 5
+      MinSlope: 0
+      MaxSlope: 20
+      SlopeFalloffType: 1
+      SlopeFalloffMinMax: 1
+      MinAddSlopeFalloff: 30
+      MaxAddSlopeFalloff: 30
+      AddSlopeFalloff: 30
+      NoiseTexture: {fileID: 0}
+      Fractal:
+        noiseType: 0
+        seed: 0
+        octaves: 3
+        frequency: 0.03
+        lacunarity: 2
+        persistence: 0.5
+      RangeMin: -0.5
+      RangeMax: 0.5
+      CheckGlobalFractalNoise: 0
+      NoisePreviewTexture: 0
+      RemapNoiseMin: 0
+      RemapNoiseMax: 1
+      Invert: 0
+      SimpleFilterSettingsEditor:
+        viabilitySettingsFoldout: 1
+        additionalNoiseSettingsFoldout: 1
+    SimpleEraseFilterSettings:
+      CheckHeight: 0
+      CheckSlope: 0
+      MinHeight: 0
+      MaxHeight: 0
+      HeightFalloffType: 1
+      HeightFalloffMinMax: 0
+      MinAddHeightFalloff: 20
+      MaxAddHeightFalloff: 20
+      AddHeightFalloff: 20
+      HeightNoiseFractal:
+        noiseType: 0
+        seed: 0
+        octaves: 3
+        frequency: 0.03
+        lacunarity: 2
+        persistence: 0.5
+      HeightNoise: 0
+      _maxRangeNoise: 5
+      _minRangeNoise: 5
+      MinSlope: 0
+      MaxSlope: 20
+      SlopeFalloffType: 1
+      SlopeFalloffMinMax: 1
+      MinAddSlopeFalloff: 30
+      MaxAddSlopeFalloff: 30
+      AddSlopeFalloff: 30
+      NoiseTexture: {fileID: 0}
+      Fractal:
+        noiseType: 0
+        seed: 0
+        octaves: 3
+        frequency: 0.03
+        lacunarity: 2
+        persistence: 0.5
+      RangeMin: -0.5
+      RangeMax: 0.5
+      CheckGlobalFractalNoise: 0
+      NoisePreviewTexture: 0
+      RemapNoiseMin: 0
+      RemapNoiseMax: 1
+      Invert: 0
+      SimpleFilterSettingsEditor:
+        viabilitySettingsFoldout: 1
+        additionalNoiseSettingsFoldout: 1
+    SimpleModifyFilterSettings:
+      CheckHeight: 0
+      CheckSlope: 0
+      MinHeight: 0
+      MaxHeight: 0
+      HeightFalloffType: 1
+      HeightFalloffMinMax: 0
+      MinAddHeightFalloff: 20
+      MaxAddHeightFalloff: 20
+      AddHeightFalloff: 20
+      HeightNoiseFractal:
+        noiseType: 0
+        seed: 0
+        octaves: 3
+        frequency: 0.03
+        lacunarity: 2
+        persistence: 0.5
+      HeightNoise: 0
+      _maxRangeNoise: 5
+      _minRangeNoise: 5
+      MinSlope: 0
+      MaxSlope: 20
+      SlopeFalloffType: 1
+      SlopeFalloffMinMax: 1
+      MinAddSlopeFalloff: 30
+      MaxAddSlopeFalloff: 30
+      AddSlopeFalloff: 30
+      NoiseTexture: {fileID: 0}
+      Fractal:
+        noiseType: 0
+        seed: 0
+        octaves: 3
+        frequency: 0.03
+        lacunarity: 2
+        persistence: 0.5
+      RangeMin: -0.5
+      RangeMax: 0.5
+      CheckGlobalFractalNoise: 0
+      NoisePreviewTexture: 0
+      RemapNoiseMin: 0
+      RemapNoiseMax: 1
+      Invert: 0
+      SimpleFilterSettingsEditor:
+        viabilitySettingsFoldout: 1
+        additionalNoiseSettingsFoldout: 1
+    EraseMaskFilterStack:
+      Filters: []
+    MaskFilterStack:
+      Filters: []
+    ModifyMaskFilterStack:
+      Filters: []
+    FilterMaskTexture2D: {fileID: 0}
+  - prefab: {fileID: 3911698401217941285, guid: 9737c21b4868c8849938cc0ac5df5e76,
+      type: 3}
+    selected: 0
+    active: 1
+    ID: 95620
+    Extents: {x: 0.41456604, y: 1.5104198, z: 0.43035126}
+    AdditionalSpawnSettings:
+      Success: 100
+      SuccessForErase: 100
+      AdditionalSpawnSettingsEditor:
+        success:
+          m_Text: Success (%)
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        successForErase:
+          m_Text: Success of Erase (%)
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+    FailureSettings:
+      Enable: 1
+      FailureRateFromFitness:
+        blendMode: 0
+        keys:
+        - colour: {r: 0, g: 0, b: 0, a: 1}
+          time: 0
+        - colour: {r: 1, g: 1, b: 1, a: 1}
+          time: 1
+      FailureRate: 80
+      FailureSettingsEditor:
+        failureSettingsFoldout: 1
+    OverlapCheckSettings:
+      OverlapShape: 2
+      BoundsCheck:
+        boundsType: 1
+        uniformBoundsSize: 0
+        boundsSize: {x: 1, y: 1, z: 1}
+        multiplyBoundsSize: 1
+      SphereCheck:
+        vegetationMode: 1
+        size: 3.5
+        priority: 0
+        viabilitySize: 4
+        trunkSize: 0.8
+      CollisionCheck:
+        multiplyBoundsSize: 1
+        collisionCheckType: 0
+        checkCollisionLayers:
+          serializedVersion: 2
+          m_Bits: 0
+      "Overlap\u0421heckTypeEditor":
+        "overlap\u0421heckFoldout": 1
+    TransformComponentsStack:
+      TransformComponents: []
+    SimpleFilterSettings:
+      CheckHeight: 0
+      CheckSlope: 0
+      MinHeight: 0
+      MaxHeight: 0
+      HeightFalloffType: 1
+      HeightFalloffMinMax: 0
+      MinAddHeightFalloff: 20
+      MaxAddHeightFalloff: 20
+      AddHeightFalloff: 20
+      HeightNoiseFractal:
+        noiseType: 0
+        seed: 0
+        octaves: 3
+        frequency: 0.03
+        lacunarity: 2
+        persistence: 0.5
+      HeightNoise: 0
+      _maxRangeNoise: 5
+      _minRangeNoise: 5
+      MinSlope: 0
+      MaxSlope: 20
+      SlopeFalloffType: 1
+      SlopeFalloffMinMax: 1
+      MinAddSlopeFalloff: 30
+      MaxAddSlopeFalloff: 30
+      AddSlopeFalloff: 30
+      NoiseTexture: {fileID: 0}
+      Fractal:
+        noiseType: 0
+        seed: 0
+        octaves: 3
+        frequency: 0.03
+        lacunarity: 2
+        persistence: 0.5
+      RangeMin: -0.5
+      RangeMax: 0.5
+      CheckGlobalFractalNoise: 0
+      NoisePreviewTexture: 0
+      RemapNoiseMin: 0
+      RemapNoiseMax: 1
+      Invert: 0
+      SimpleFilterSettingsEditor:
+        viabilitySettingsFoldout: 1
+        additionalNoiseSettingsFoldout: 1
+    SimpleEraseFilterSettings:
+      CheckHeight: 0
+      CheckSlope: 0
+      MinHeight: 0
+      MaxHeight: 0
+      HeightFalloffType: 1
+      HeightFalloffMinMax: 0
+      MinAddHeightFalloff: 20
+      MaxAddHeightFalloff: 20
+      AddHeightFalloff: 20
+      HeightNoiseFractal:
+        noiseType: 0
+        seed: 0
+        octaves: 3
+        frequency: 0.03
+        lacunarity: 2
+        persistence: 0.5
+      HeightNoise: 0
+      _maxRangeNoise: 5
+      _minRangeNoise: 5
+      MinSlope: 0
+      MaxSlope: 20
+      SlopeFalloffType: 1
+      SlopeFalloffMinMax: 1
+      MinAddSlopeFalloff: 30
+      MaxAddSlopeFalloff: 30
+      AddSlopeFalloff: 30
+      NoiseTexture: {fileID: 0}
+      Fractal:
+        noiseType: 0
+        seed: 0
+        octaves: 3
+        frequency: 0.03
+        lacunarity: 2
+        persistence: 0.5
+      RangeMin: -0.5
+      RangeMax: 0.5
+      CheckGlobalFractalNoise: 0
+      NoisePreviewTexture: 0
+      RemapNoiseMin: 0
+      RemapNoiseMax: 1
+      Invert: 0
+      SimpleFilterSettingsEditor:
+        viabilitySettingsFoldout: 1
+        additionalNoiseSettingsFoldout: 1
+    SimpleModifyFilterSettings:
+      CheckHeight: 0
+      CheckSlope: 0
+      MinHeight: 0
+      MaxHeight: 0
+      HeightFalloffType: 1
+      HeightFalloffMinMax: 0
+      MinAddHeightFalloff: 20
+      MaxAddHeightFalloff: 20
+      AddHeightFalloff: 20
+      HeightNoiseFractal:
+        noiseType: 0
+        seed: 0
+        octaves: 3
+        frequency: 0.03
+        lacunarity: 2
+        persistence: 0.5
+      HeightNoise: 0
+      _maxRangeNoise: 5
+      _minRangeNoise: 5
+      MinSlope: 0
+      MaxSlope: 20
+      SlopeFalloffType: 1
+      SlopeFalloffMinMax: 1
+      MinAddSlopeFalloff: 30
+      MaxAddSlopeFalloff: 30
+      AddSlopeFalloff: 30
+      NoiseTexture: {fileID: 0}
+      Fractal:
+        noiseType: 0
+        seed: 0
+        octaves: 3
+        frequency: 0.03
+        lacunarity: 2
+        persistence: 0.5
+      RangeMin: -0.5
+      RangeMax: 0.5
+      CheckGlobalFractalNoise: 0
+      NoisePreviewTexture: 0
+      RemapNoiseMin: 0
+      RemapNoiseMax: 1
+      Invert: 0
+      SimpleFilterSettingsEditor:
+        viabilitySettingsFoldout: 1
+        additionalNoiseSettingsFoldout: 1
+    EraseMaskFilterStack:
+      Filters: []
+    MaskFilterStack:
+      Filters: []
+    ModifyMaskFilterStack:
+      Filters: []
+    FilterMaskTexture2D: {fileID: 0}
+  - prefab: {fileID: 5776893926390614252, guid: 383f6734d1cdc404ab17847a50df1e3a,
+      type: 3}
+    selected: 0
+    active: 1
+    ID: 95640
+    Extents: {x: 0.5265045, y: 0.54442215, z: 0.53674316}
+    AdditionalSpawnSettings:
+      Success: 100
+      SuccessForErase: 100
+      AdditionalSpawnSettingsEditor:
+        success:
+          m_Text: Success (%)
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        successForErase:
+          m_Text: Success of Erase (%)
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+    FailureSettings:
+      Enable: 1
+      FailureRateFromFitness:
+        blendMode: 0
+        keys:
+        - colour: {r: 0, g: 0, b: 0, a: 1}
+          time: 0
+        - colour: {r: 1, g: 1, b: 1, a: 1}
+          time: 1
+      FailureRate: 80
+      FailureSettingsEditor:
+        failureSettingsFoldout: 1
+    OverlapCheckSettings:
+      OverlapShape: 2
+      BoundsCheck:
+        boundsType: 1
+        uniformBoundsSize: 0
+        boundsSize: {x: 1, y: 1, z: 1}
+        multiplyBoundsSize: 1
+      SphereCheck:
+        vegetationMode: 1
+        size: 3.5
+        priority: 0
+        viabilitySize: 4
+        trunkSize: 0.8
+      CollisionCheck:
+        multiplyBoundsSize: 1
+        collisionCheckType: 0
+        checkCollisionLayers:
+          serializedVersion: 2
+          m_Bits: 0
+      "Overlap\u0421heckTypeEditor":
+        "overlap\u0421heckFoldout": 1
+    TransformComponentsStack:
+      TransformComponents: []
+    SimpleFilterSettings:
+      CheckHeight: 0
+      CheckSlope: 0
+      MinHeight: 0
+      MaxHeight: 0
+      HeightFalloffType: 1
+      HeightFalloffMinMax: 0
+      MinAddHeightFalloff: 20
+      MaxAddHeightFalloff: 20
+      AddHeightFalloff: 20
+      HeightNoiseFractal:
+        noiseType: 0
+        seed: 0
+        octaves: 3
+        frequency: 0.03
+        lacunarity: 2
+        persistence: 0.5
+      HeightNoise: 0
+      _maxRangeNoise: 5
+      _minRangeNoise: 5
+      MinSlope: 0
+      MaxSlope: 20
+      SlopeFalloffType: 1
+      SlopeFalloffMinMax: 1
+      MinAddSlopeFalloff: 30
+      MaxAddSlopeFalloff: 30
+      AddSlopeFalloff: 30
+      NoiseTexture: {fileID: 0}
+      Fractal:
+        noiseType: 0
+        seed: 0
+        octaves: 3
+        frequency: 0.03
+        lacunarity: 2
+        persistence: 0.5
+      RangeMin: -0.5
+      RangeMax: 0.5
+      CheckGlobalFractalNoise: 0
+      NoisePreviewTexture: 0
+      RemapNoiseMin: 0
+      RemapNoiseMax: 1
+      Invert: 0
+      SimpleFilterSettingsEditor:
+        viabilitySettingsFoldout: 1
+        additionalNoiseSettingsFoldout: 1
+    SimpleEraseFilterSettings:
+      CheckHeight: 0
+      CheckSlope: 0
+      MinHeight: 0
+      MaxHeight: 0
+      HeightFalloffType: 1
+      HeightFalloffMinMax: 0
+      MinAddHeightFalloff: 20
+      MaxAddHeightFalloff: 20
+      AddHeightFalloff: 20
+      HeightNoiseFractal:
+        noiseType: 0
+        seed: 0
+        octaves: 3
+        frequency: 0.03
+        lacunarity: 2
+        persistence: 0.5
+      HeightNoise: 0
+      _maxRangeNoise: 5
+      _minRangeNoise: 5
+      MinSlope: 0
+      MaxSlope: 20
+      SlopeFalloffType: 1
+      SlopeFalloffMinMax: 1
+      MinAddSlopeFalloff: 30
+      MaxAddSlopeFalloff: 30
+      AddSlopeFalloff: 30
+      NoiseTexture: {fileID: 0}
+      Fractal:
+        noiseType: 0
+        seed: 0
+        octaves: 3
+        frequency: 0.03
+        lacunarity: 2
+        persistence: 0.5
+      RangeMin: -0.5
+      RangeMax: 0.5
+      CheckGlobalFractalNoise: 0
+      NoisePreviewTexture: 0
+      RemapNoiseMin: 0
+      RemapNoiseMax: 1
+      Invert: 0
+      SimpleFilterSettingsEditor:
+        viabilitySettingsFoldout: 1
+        additionalNoiseSettingsFoldout: 1
+    SimpleModifyFilterSettings:
+      CheckHeight: 0
+      CheckSlope: 0
+      MinHeight: 0
+      MaxHeight: 0
+      HeightFalloffType: 1
+      HeightFalloffMinMax: 0
+      MinAddHeightFalloff: 20
+      MaxAddHeightFalloff: 20
+      AddHeightFalloff: 20
+      HeightNoiseFractal:
+        noiseType: 0
+        seed: 0
+        octaves: 3
+        frequency: 0.03
+        lacunarity: 2
+        persistence: 0.5
+      HeightNoise: 0
+      _maxRangeNoise: 5
+      _minRangeNoise: 5
+      MinSlope: 0
+      MaxSlope: 20
+      SlopeFalloffType: 1
+      SlopeFalloffMinMax: 1
+      MinAddSlopeFalloff: 30
+      MaxAddSlopeFalloff: 30
+      AddSlopeFalloff: 30
+      NoiseTexture: {fileID: 0}
+      Fractal:
+        noiseType: 0
+        seed: 0
+        octaves: 3
+        frequency: 0.03
+        lacunarity: 2
+        persistence: 0.5
+      RangeMin: -0.5
+      RangeMax: 0.5
+      CheckGlobalFractalNoise: 0
+      NoisePreviewTexture: 0
+      RemapNoiseMin: 0
+      RemapNoiseMax: 1
+      Invert: 0
+      SimpleFilterSettingsEditor:
+        viabilitySettingsFoldout: 1
+        additionalNoiseSettingsFoldout: 1
+    EraseMaskFilterStack:
+      Filters: []
+    MaskFilterStack:
+      Filters: []
+    ModifyMaskFilterStack:
+      Filters: []
+    FilterMaskTexture2D: {fileID: 0}
+  - prefab: {fileID: 3765925189806141725, guid: 4c6d1de2a18a33546876a60bebdab002,
+      type: 3}
+    selected: 0
+    active: 1
+    ID: 95660
+    Extents: {x: 0.4949875, y: 0.3851738, z: 0.48247528}
+    AdditionalSpawnSettings:
+      Success: 100
+      SuccessForErase: 100
+      AdditionalSpawnSettingsEditor:
+        success:
+          m_Text: Success (%)
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        successForErase:
+          m_Text: Success of Erase (%)
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+    FailureSettings:
+      Enable: 1
+      FailureRateFromFitness:
+        blendMode: 0
+        keys:
+        - colour: {r: 0, g: 0, b: 0, a: 1}
+          time: 0
+        - colour: {r: 1, g: 1, b: 1, a: 1}
+          time: 1
+      FailureRate: 80
+      FailureSettingsEditor:
+        failureSettingsFoldout: 1
+    OverlapCheckSettings:
+      OverlapShape: 2
+      BoundsCheck:
+        boundsType: 1
+        uniformBoundsSize: 0
+        boundsSize: {x: 1, y: 1, z: 1}
+        multiplyBoundsSize: 1
+      SphereCheck:
+        vegetationMode: 1
+        size: 3.5
+        priority: 0
+        viabilitySize: 4
+        trunkSize: 0.8
+      CollisionCheck:
+        multiplyBoundsSize: 1
+        collisionCheckType: 0
+        checkCollisionLayers:
+          serializedVersion: 2
+          m_Bits: 0
+      "Overlap\u0421heckTypeEditor":
+        "overlap\u0421heckFoldout": 1
+    TransformComponentsStack:
+      TransformComponents: []
+    SimpleFilterSettings:
+      CheckHeight: 0
+      CheckSlope: 0
+      MinHeight: 0
+      MaxHeight: 0
+      HeightFalloffType: 1
+      HeightFalloffMinMax: 0
+      MinAddHeightFalloff: 20
+      MaxAddHeightFalloff: 20
+      AddHeightFalloff: 20
+      HeightNoiseFractal:
+        noiseType: 0
+        seed: 0
+        octaves: 3
+        frequency: 0.03
+        lacunarity: 2
+        persistence: 0.5
+      HeightNoise: 0
+      _maxRangeNoise: 5
+      _minRangeNoise: 5
+      MinSlope: 0
+      MaxSlope: 20
+      SlopeFalloffType: 1
+      SlopeFalloffMinMax: 1
+      MinAddSlopeFalloff: 30
+      MaxAddSlopeFalloff: 30
+      AddSlopeFalloff: 30
+      NoiseTexture: {fileID: 0}
+      Fractal:
+        noiseType: 0
+        seed: 0
+        octaves: 3
+        frequency: 0.03
+        lacunarity: 2
+        persistence: 0.5
+      RangeMin: -0.5
+      RangeMax: 0.5
+      CheckGlobalFractalNoise: 0
+      NoisePreviewTexture: 0
+      RemapNoiseMin: 0
+      RemapNoiseMax: 1
+      Invert: 0
+      SimpleFilterSettingsEditor:
+        viabilitySettingsFoldout: 1
+        additionalNoiseSettingsFoldout: 1
+    SimpleEraseFilterSettings:
+      CheckHeight: 0
+      CheckSlope: 0
+      MinHeight: 0
+      MaxHeight: 0
+      HeightFalloffType: 1
+      HeightFalloffMinMax: 0
+      MinAddHeightFalloff: 20
+      MaxAddHeightFalloff: 20
+      AddHeightFalloff: 20
+      HeightNoiseFractal:
+        noiseType: 0
+        seed: 0
+        octaves: 3
+        frequency: 0.03
+        lacunarity: 2
+        persistence: 0.5
+      HeightNoise: 0
+      _maxRangeNoise: 5
+      _minRangeNoise: 5
+      MinSlope: 0
+      MaxSlope: 20
+      SlopeFalloffType: 1
+      SlopeFalloffMinMax: 1
+      MinAddSlopeFalloff: 30
+      MaxAddSlopeFalloff: 30
+      AddSlopeFalloff: 30
+      NoiseTexture: {fileID: 0}
+      Fractal:
+        noiseType: 0
+        seed: 0
+        octaves: 3
+        frequency: 0.03
+        lacunarity: 2
+        persistence: 0.5
+      RangeMin: -0.5
+      RangeMax: 0.5
+      CheckGlobalFractalNoise: 0
+      NoisePreviewTexture: 0
+      RemapNoiseMin: 0
+      RemapNoiseMax: 1
+      Invert: 0
+      SimpleFilterSettingsEditor:
+        viabilitySettingsFoldout: 1
+        additionalNoiseSettingsFoldout: 1
+    SimpleModifyFilterSettings:
+      CheckHeight: 0
+      CheckSlope: 0
+      MinHeight: 0
+      MaxHeight: 0
+      HeightFalloffType: 1
+      HeightFalloffMinMax: 0
+      MinAddHeightFalloff: 20
+      MaxAddHeightFalloff: 20
+      AddHeightFalloff: 20
+      HeightNoiseFractal:
+        noiseType: 0
+        seed: 0
+        octaves: 3
+        frequency: 0.03
+        lacunarity: 2
+        persistence: 0.5
+      HeightNoise: 0
+      _maxRangeNoise: 5
+      _minRangeNoise: 5
+      MinSlope: 0
+      MaxSlope: 20
+      SlopeFalloffType: 1
+      SlopeFalloffMinMax: 1
+      MinAddSlopeFalloff: 30
+      MaxAddSlopeFalloff: 30
+      AddSlopeFalloff: 30
+      NoiseTexture: {fileID: 0}
+      Fractal:
+        noiseType: 0
+        seed: 0
+        octaves: 3
+        frequency: 0.03
+        lacunarity: 2
+        persistence: 0.5
+      RangeMin: -0.5
+      RangeMax: 0.5
+      CheckGlobalFractalNoise: 0
+      NoisePreviewTexture: 0
+      RemapNoiseMin: 0
+      RemapNoiseMax: 1
+      Invert: 0
+      SimpleFilterSettingsEditor:
+        viabilitySettingsFoldout: 1
+        additionalNoiseSettingsFoldout: 1
+    EraseMaskFilterStack:
+      Filters: []
+    MaskFilterStack:
+      Filters: []
+    ModifyMaskFilterStack:
+      Filters: []
+    FilterMaskTexture2D: {fileID: 0}
+  - prefab: {fileID: 226729537066130859, guid: 140d7bb42a92e924282ad4ae2ac89601, type: 3}
+    selected: 0
+    active: 1
+    ID: 95700
+    Extents: {x: 0.6467514, y: 0.17097092, z: 0.6989975}
+    AdditionalSpawnSettings:
+      Success: 100
+      SuccessForErase: 100
+      AdditionalSpawnSettingsEditor:
+        success:
+          m_Text: Success (%)
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        successForErase:
+          m_Text: Success of Erase (%)
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+    FailureSettings:
+      Enable: 1
+      FailureRateFromFitness:
+        blendMode: 0
+        keys:
+        - colour: {r: 0, g: 0, b: 0, a: 1}
+          time: 0
+        - colour: {r: 1, g: 1, b: 1, a: 1}
+          time: 1
+      FailureRate: 80
+      FailureSettingsEditor:
+        failureSettingsFoldout: 1
+    OverlapCheckSettings:
+      OverlapShape: 2
+      BoundsCheck:
+        boundsType: 1
+        uniformBoundsSize: 0
+        boundsSize: {x: 1, y: 1, z: 1}
+        multiplyBoundsSize: 1
+      SphereCheck:
+        vegetationMode: 1
+        size: 3.5
+        priority: 0
+        viabilitySize: 4
+        trunkSize: 0.8
+      CollisionCheck:
+        multiplyBoundsSize: 1
+        collisionCheckType: 0
+        checkCollisionLayers:
+          serializedVersion: 2
+          m_Bits: 0
+      "Overlap\u0421heckTypeEditor":
+        "overlap\u0421heckFoldout": 1
+    TransformComponentsStack:
+      TransformComponents: []
+    SimpleFilterSettings:
+      CheckHeight: 0
+      CheckSlope: 0
+      MinHeight: 0
+      MaxHeight: 0
+      HeightFalloffType: 1
+      HeightFalloffMinMax: 0
+      MinAddHeightFalloff: 20
+      MaxAddHeightFalloff: 20
+      AddHeightFalloff: 20
+      HeightNoiseFractal:
+        noiseType: 0
+        seed: 0
+        octaves: 3
+        frequency: 0.03
+        lacunarity: 2
+        persistence: 0.5
+      HeightNoise: 0
+      _maxRangeNoise: 5
+      _minRangeNoise: 5
+      MinSlope: 0
+      MaxSlope: 20
+      SlopeFalloffType: 1
+      SlopeFalloffMinMax: 1
+      MinAddSlopeFalloff: 30
+      MaxAddSlopeFalloff: 30
+      AddSlopeFalloff: 30
+      NoiseTexture: {fileID: 0}
+      Fractal:
+        noiseType: 0
+        seed: 0
+        octaves: 3
+        frequency: 0.03
+        lacunarity: 2
+        persistence: 0.5
+      RangeMin: -0.5
+      RangeMax: 0.5
+      CheckGlobalFractalNoise: 0
+      NoisePreviewTexture: 0
+      RemapNoiseMin: 0
+      RemapNoiseMax: 1
+      Invert: 0
+      SimpleFilterSettingsEditor:
+        viabilitySettingsFoldout: 1
+        additionalNoiseSettingsFoldout: 1
+    SimpleEraseFilterSettings:
+      CheckHeight: 0
+      CheckSlope: 0
+      MinHeight: 0
+      MaxHeight: 0
+      HeightFalloffType: 1
+      HeightFalloffMinMax: 0
+      MinAddHeightFalloff: 20
+      MaxAddHeightFalloff: 20
+      AddHeightFalloff: 20
+      HeightNoiseFractal:
+        noiseType: 0
+        seed: 0
+        octaves: 3
+        frequency: 0.03
+        lacunarity: 2
+        persistence: 0.5
+      HeightNoise: 0
+      _maxRangeNoise: 5
+      _minRangeNoise: 5
+      MinSlope: 0
+      MaxSlope: 20
+      SlopeFalloffType: 1
+      SlopeFalloffMinMax: 1
+      MinAddSlopeFalloff: 30
+      MaxAddSlopeFalloff: 30
+      AddSlopeFalloff: 30
+      NoiseTexture: {fileID: 0}
+      Fractal:
+        noiseType: 0
+        seed: 0
+        octaves: 3
+        frequency: 0.03
+        lacunarity: 2
+        persistence: 0.5
+      RangeMin: -0.5
+      RangeMax: 0.5
+      CheckGlobalFractalNoise: 0
+      NoisePreviewTexture: 0
+      RemapNoiseMin: 0
+      RemapNoiseMax: 1
+      Invert: 0
+      SimpleFilterSettingsEditor:
+        viabilitySettingsFoldout: 1
+        additionalNoiseSettingsFoldout: 1
+    SimpleModifyFilterSettings:
+      CheckHeight: 0
+      CheckSlope: 0
+      MinHeight: 0
+      MaxHeight: 0
+      HeightFalloffType: 1
+      HeightFalloffMinMax: 0
+      MinAddHeightFalloff: 20
+      MaxAddHeightFalloff: 20
+      AddHeightFalloff: 20
+      HeightNoiseFractal:
+        noiseType: 0
+        seed: 0
+        octaves: 3
+        frequency: 0.03
+        lacunarity: 2
+        persistence: 0.5
+      HeightNoise: 0
+      _maxRangeNoise: 5
+      _minRangeNoise: 5
+      MinSlope: 0
+      MaxSlope: 20
+      SlopeFalloffType: 1
+      SlopeFalloffMinMax: 1
+      MinAddSlopeFalloff: 30
+      MaxAddSlopeFalloff: 30
+      AddSlopeFalloff: 30
+      NoiseTexture: {fileID: 0}
+      Fractal:
+        noiseType: 0
+        seed: 0
+        octaves: 3
+        frequency: 0.03
+        lacunarity: 2
+        persistence: 0.5
+      RangeMin: -0.5
+      RangeMax: 0.5
+      CheckGlobalFractalNoise: 0
+      NoisePreviewTexture: 0
+      RemapNoiseMin: 0
+      RemapNoiseMax: 1
+      Invert: 0
+      SimpleFilterSettingsEditor:
+        viabilitySettingsFoldout: 1
+        additionalNoiseSettingsFoldout: 1
+    EraseMaskFilterStack:
+      Filters: []
+    MaskFilterStack:
+      Filters: []
+    ModifyMaskFilterStack:
+      Filters: []
+    FilterMaskTexture2D: {fileID: 0}
+  - prefab: {fileID: 7633587424997585534, guid: 867ef1d24f51aed4786959c67639c6eb,
+      type: 3}
+    selected: 0
+    active: 1
+    ID: 95720
+    Extents: {x: 0.5751648, y: 0.31688976, z: 0.5264282}
+    AdditionalSpawnSettings:
+      Success: 100
+      SuccessForErase: 100
+      AdditionalSpawnSettingsEditor:
+        success:
+          m_Text: Success (%)
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        successForErase:
+          m_Text: Success of Erase (%)
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+    FailureSettings:
+      Enable: 1
+      FailureRateFromFitness:
+        blendMode: 0
+        keys:
+        - colour: {r: 0, g: 0, b: 0, a: 1}
+          time: 0
+        - colour: {r: 1, g: 1, b: 1, a: 1}
+          time: 1
+      FailureRate: 80
+      FailureSettingsEditor:
+        failureSettingsFoldout: 1
+    OverlapCheckSettings:
+      OverlapShape: 2
+      BoundsCheck:
+        boundsType: 1
+        uniformBoundsSize: 0
+        boundsSize: {x: 1, y: 1, z: 1}
+        multiplyBoundsSize: 1
+      SphereCheck:
+        vegetationMode: 1
+        size: 3.5
+        priority: 0
+        viabilitySize: 4
+        trunkSize: 0.8
+      CollisionCheck:
+        multiplyBoundsSize: 1
+        collisionCheckType: 0
+        checkCollisionLayers:
+          serializedVersion: 2
+          m_Bits: 0
+      "Overlap\u0421heckTypeEditor":
+        "overlap\u0421heckFoldout": 1
+    TransformComponentsStack:
+      TransformComponents: []
+    SimpleFilterSettings:
+      CheckHeight: 0
+      CheckSlope: 0
+      MinHeight: 0
+      MaxHeight: 0
+      HeightFalloffType: 1
+      HeightFalloffMinMax: 0
+      MinAddHeightFalloff: 20
+      MaxAddHeightFalloff: 20
+      AddHeightFalloff: 20
+      HeightNoiseFractal:
+        noiseType: 0
+        seed: 0
+        octaves: 3
+        frequency: 0.03
+        lacunarity: 2
+        persistence: 0.5
+      HeightNoise: 0
+      _maxRangeNoise: 5
+      _minRangeNoise: 5
+      MinSlope: 0
+      MaxSlope: 20
+      SlopeFalloffType: 1
+      SlopeFalloffMinMax: 1
+      MinAddSlopeFalloff: 30
+      MaxAddSlopeFalloff: 30
+      AddSlopeFalloff: 30
+      NoiseTexture: {fileID: 0}
+      Fractal:
+        noiseType: 0
+        seed: 0
+        octaves: 3
+        frequency: 0.03
+        lacunarity: 2
+        persistence: 0.5
+      RangeMin: -0.5
+      RangeMax: 0.5
+      CheckGlobalFractalNoise: 0
+      NoisePreviewTexture: 0
+      RemapNoiseMin: 0
+      RemapNoiseMax: 1
+      Invert: 0
+      SimpleFilterSettingsEditor:
+        viabilitySettingsFoldout: 1
+        additionalNoiseSettingsFoldout: 1
+    SimpleEraseFilterSettings:
+      CheckHeight: 0
+      CheckSlope: 0
+      MinHeight: 0
+      MaxHeight: 0
+      HeightFalloffType: 1
+      HeightFalloffMinMax: 0
+      MinAddHeightFalloff: 20
+      MaxAddHeightFalloff: 20
+      AddHeightFalloff: 20
+      HeightNoiseFractal:
+        noiseType: 0
+        seed: 0
+        octaves: 3
+        frequency: 0.03
+        lacunarity: 2
+        persistence: 0.5
+      HeightNoise: 0
+      _maxRangeNoise: 5
+      _minRangeNoise: 5
+      MinSlope: 0
+      MaxSlope: 20
+      SlopeFalloffType: 1
+      SlopeFalloffMinMax: 1
+      MinAddSlopeFalloff: 30
+      MaxAddSlopeFalloff: 30
+      AddSlopeFalloff: 30
+      NoiseTexture: {fileID: 0}
+      Fractal:
+        noiseType: 0
+        seed: 0
+        octaves: 3
+        frequency: 0.03
+        lacunarity: 2
+        persistence: 0.5
+      RangeMin: -0.5
+      RangeMax: 0.5
+      CheckGlobalFractalNoise: 0
+      NoisePreviewTexture: 0
+      RemapNoiseMin: 0
+      RemapNoiseMax: 1
+      Invert: 0
+      SimpleFilterSettingsEditor:
+        viabilitySettingsFoldout: 1
+        additionalNoiseSettingsFoldout: 1
+    SimpleModifyFilterSettings:
+      CheckHeight: 0
+      CheckSlope: 0
+      MinHeight: 0
+      MaxHeight: 0
+      HeightFalloffType: 1
+      HeightFalloffMinMax: 0
+      MinAddHeightFalloff: 20
+      MaxAddHeightFalloff: 20
+      AddHeightFalloff: 20
+      HeightNoiseFractal:
+        noiseType: 0
+        seed: 0
+        octaves: 3
+        frequency: 0.03
+        lacunarity: 2
+        persistence: 0.5
+      HeightNoise: 0
+      _maxRangeNoise: 5
+      _minRangeNoise: 5
+      MinSlope: 0
+      MaxSlope: 20
+      SlopeFalloffType: 1
+      SlopeFalloffMinMax: 1
+      MinAddSlopeFalloff: 30
+      MaxAddSlopeFalloff: 30
+      AddSlopeFalloff: 30
+      NoiseTexture: {fileID: 0}
+      Fractal:
+        noiseType: 0
+        seed: 0
+        octaves: 3
+        frequency: 0.03
+        lacunarity: 2
+        persistence: 0.5
+      RangeMin: -0.5
+      RangeMax: 0.5
+      CheckGlobalFractalNoise: 0
+      NoisePreviewTexture: 0
+      RemapNoiseMin: 0
+      RemapNoiseMax: 1
+      Invert: 0
+      SimpleFilterSettingsEditor:
+        viabilitySettingsFoldout: 1
+        additionalNoiseSettingsFoldout: 1
+    EraseMaskFilterStack:
+      Filters: []
+    MaskFilterStack:
+      Filters: []
+    ModifyMaskFilterStack:
+      Filters: []
+    FilterMaskTexture2D: {fileID: 0}
+  - prefab: {fileID: 5180425602197665123, guid: 80b705b3ff0bdb24a8b6a1f1ad3c4242,
+      type: 3}
+    selected: 0
+    active: 1
+    ID: 95740
+    Extents: {x: 0.33666992, y: 0.22045135, z: 0.33892822}
+    AdditionalSpawnSettings:
+      Success: 100
+      SuccessForErase: 100
+      AdditionalSpawnSettingsEditor:
+        success:
+          m_Text: Success (%)
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        successForErase:
+          m_Text: Success of Erase (%)
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+    FailureSettings:
+      Enable: 1
+      FailureRateFromFitness:
+        blendMode: 0
+        keys:
+        - colour: {r: 0, g: 0, b: 0, a: 1}
+          time: 0
+        - colour: {r: 1, g: 1, b: 1, a: 1}
+          time: 1
+      FailureRate: 80
+      FailureSettingsEditor:
+        failureSettingsFoldout: 1
+    OverlapCheckSettings:
+      OverlapShape: 2
+      BoundsCheck:
+        boundsType: 1
+        uniformBoundsSize: 0
+        boundsSize: {x: 1, y: 1, z: 1}
+        multiplyBoundsSize: 1
+      SphereCheck:
+        vegetationMode: 1
+        size: 3.5
+        priority: 0
+        viabilitySize: 4
+        trunkSize: 0.8
+      CollisionCheck:
+        multiplyBoundsSize: 1
+        collisionCheckType: 0
+        checkCollisionLayers:
+          serializedVersion: 2
+          m_Bits: 0
+      "Overlap\u0421heckTypeEditor":
+        "overlap\u0421heckFoldout": 1
+    TransformComponentsStack:
+      TransformComponents: []
+    SimpleFilterSettings:
+      CheckHeight: 0
+      CheckSlope: 0
+      MinHeight: 0
+      MaxHeight: 0
+      HeightFalloffType: 1
+      HeightFalloffMinMax: 0
+      MinAddHeightFalloff: 20
+      MaxAddHeightFalloff: 20
+      AddHeightFalloff: 20
+      HeightNoiseFractal:
+        noiseType: 0
+        seed: 0
+        octaves: 3
+        frequency: 0.03
+        lacunarity: 2
+        persistence: 0.5
+      HeightNoise: 0
+      _maxRangeNoise: 5
+      _minRangeNoise: 5
+      MinSlope: 0
+      MaxSlope: 20
+      SlopeFalloffType: 1
+      SlopeFalloffMinMax: 1
+      MinAddSlopeFalloff: 30
+      MaxAddSlopeFalloff: 30
+      AddSlopeFalloff: 30
+      NoiseTexture: {fileID: 0}
+      Fractal:
+        noiseType: 0
+        seed: 0
+        octaves: 3
+        frequency: 0.03
+        lacunarity: 2
+        persistence: 0.5
+      RangeMin: -0.5
+      RangeMax: 0.5
+      CheckGlobalFractalNoise: 0
+      NoisePreviewTexture: 0
+      RemapNoiseMin: 0
+      RemapNoiseMax: 1
+      Invert: 0
+      SimpleFilterSettingsEditor:
+        viabilitySettingsFoldout: 1
+        additionalNoiseSettingsFoldout: 1
+    SimpleEraseFilterSettings:
+      CheckHeight: 0
+      CheckSlope: 0
+      MinHeight: 0
+      MaxHeight: 0
+      HeightFalloffType: 1
+      HeightFalloffMinMax: 0
+      MinAddHeightFalloff: 20
+      MaxAddHeightFalloff: 20
+      AddHeightFalloff: 20
+      HeightNoiseFractal:
+        noiseType: 0
+        seed: 0
+        octaves: 3
+        frequency: 0.03
+        lacunarity: 2
+        persistence: 0.5
+      HeightNoise: 0
+      _maxRangeNoise: 5
+      _minRangeNoise: 5
+      MinSlope: 0
+      MaxSlope: 20
+      SlopeFalloffType: 1
+      SlopeFalloffMinMax: 1
+      MinAddSlopeFalloff: 30
+      MaxAddSlopeFalloff: 30
+      AddSlopeFalloff: 30
+      NoiseTexture: {fileID: 0}
+      Fractal:
+        noiseType: 0
+        seed: 0
+        octaves: 3
+        frequency: 0.03
+        lacunarity: 2
+        persistence: 0.5
+      RangeMin: -0.5
+      RangeMax: 0.5
+      CheckGlobalFractalNoise: 0
+      NoisePreviewTexture: 0
+      RemapNoiseMin: 0
+      RemapNoiseMax: 1
+      Invert: 0
+      SimpleFilterSettingsEditor:
+        viabilitySettingsFoldout: 1
+        additionalNoiseSettingsFoldout: 1
+    SimpleModifyFilterSettings:
+      CheckHeight: 0
+      CheckSlope: 0
+      MinHeight: 0
+      MaxHeight: 0
+      HeightFalloffType: 1
+      HeightFalloffMinMax: 0
+      MinAddHeightFalloff: 20
+      MaxAddHeightFalloff: 20
+      AddHeightFalloff: 20
+      HeightNoiseFractal:
+        noiseType: 0
+        seed: 0
+        octaves: 3
+        frequency: 0.03
+        lacunarity: 2
+        persistence: 0.5
+      HeightNoise: 0
+      _maxRangeNoise: 5
+      _minRangeNoise: 5
+      MinSlope: 0
+      MaxSlope: 20
+      SlopeFalloffType: 1
+      SlopeFalloffMinMax: 1
+      MinAddSlopeFalloff: 30
+      MaxAddSlopeFalloff: 30
+      AddSlopeFalloff: 30
+      NoiseTexture: {fileID: 0}
+      Fractal:
+        noiseType: 0
+        seed: 0
+        octaves: 3
+        frequency: 0.03
+        lacunarity: 2
+        persistence: 0.5
+      RangeMin: -0.5
+      RangeMax: 0.5
+      CheckGlobalFractalNoise: 0
+      NoisePreviewTexture: 0
+      RemapNoiseMin: 0
+      RemapNoiseMax: 1
+      Invert: 0
+      SimpleFilterSettingsEditor:
+        viabilitySettingsFoldout: 1
+        additionalNoiseSettingsFoldout: 1
+    EraseMaskFilterStack:
+      Filters: []
+    MaskFilterStack:
+      Filters: []
+    ModifyMaskFilterStack:
+      Filters: []
+    FilterMaskTexture2D: {fileID: 0}
+  - prefab: {fileID: 1349266204517605527, guid: 9120a1d3f89066f4b9f600a7912019ef,
+      type: 3}
+    selected: 0
+    active: 1
+    ID: 95760
+    Extents: {x: 0.3767166, y: 0.6935921, z: 0.3455429}
+    AdditionalSpawnSettings:
+      Success: 100
+      SuccessForErase: 100
+      AdditionalSpawnSettingsEditor:
+        success:
+          m_Text: Success (%)
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        successForErase:
+          m_Text: Success of Erase (%)
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+    FailureSettings:
+      Enable: 1
+      FailureRateFromFitness:
+        blendMode: 0
+        keys:
+        - colour: {r: 0, g: 0, b: 0, a: 1}
+          time: 0
+        - colour: {r: 1, g: 1, b: 1, a: 1}
+          time: 1
+      FailureRate: 80
+      FailureSettingsEditor:
+        failureSettingsFoldout: 1
+    OverlapCheckSettings:
+      OverlapShape: 2
+      BoundsCheck:
+        boundsType: 1
+        uniformBoundsSize: 0
+        boundsSize: {x: 1, y: 1, z: 1}
+        multiplyBoundsSize: 1
+      SphereCheck:
+        vegetationMode: 1
+        size: 3.5
+        priority: 0
+        viabilitySize: 4
+        trunkSize: 0.8
+      CollisionCheck:
+        multiplyBoundsSize: 1
+        collisionCheckType: 0
+        checkCollisionLayers:
+          serializedVersion: 2
+          m_Bits: 0
+      "Overlap\u0421heckTypeEditor":
+        "overlap\u0421heckFoldout": 1
+    TransformComponentsStack:
+      TransformComponents: []
+    SimpleFilterSettings:
+      CheckHeight: 0
+      CheckSlope: 0
+      MinHeight: 0
+      MaxHeight: 0
+      HeightFalloffType: 1
+      HeightFalloffMinMax: 0
+      MinAddHeightFalloff: 20
+      MaxAddHeightFalloff: 20
+      AddHeightFalloff: 20
+      HeightNoiseFractal:
+        noiseType: 0
+        seed: 0
+        octaves: 3
+        frequency: 0.03
+        lacunarity: 2
+        persistence: 0.5
+      HeightNoise: 0
+      _maxRangeNoise: 5
+      _minRangeNoise: 5
+      MinSlope: 0
+      MaxSlope: 20
+      SlopeFalloffType: 1
+      SlopeFalloffMinMax: 1
+      MinAddSlopeFalloff: 30
+      MaxAddSlopeFalloff: 30
+      AddSlopeFalloff: 30
+      NoiseTexture: {fileID: 0}
+      Fractal:
+        noiseType: 0
+        seed: 0
+        octaves: 3
+        frequency: 0.03
+        lacunarity: 2
+        persistence: 0.5
+      RangeMin: -0.5
+      RangeMax: 0.5
+      CheckGlobalFractalNoise: 0
+      NoisePreviewTexture: 0
+      RemapNoiseMin: 0
+      RemapNoiseMax: 1
+      Invert: 0
+      SimpleFilterSettingsEditor:
+        viabilitySettingsFoldout: 1
+        additionalNoiseSettingsFoldout: 1
+    SimpleEraseFilterSettings:
+      CheckHeight: 0
+      CheckSlope: 0
+      MinHeight: 0
+      MaxHeight: 0
+      HeightFalloffType: 1
+      HeightFalloffMinMax: 0
+      MinAddHeightFalloff: 20
+      MaxAddHeightFalloff: 20
+      AddHeightFalloff: 20
+      HeightNoiseFractal:
+        noiseType: 0
+        seed: 0
+        octaves: 3
+        frequency: 0.03
+        lacunarity: 2
+        persistence: 0.5
+      HeightNoise: 0
+      _maxRangeNoise: 5
+      _minRangeNoise: 5
+      MinSlope: 0
+      MaxSlope: 20
+      SlopeFalloffType: 1
+      SlopeFalloffMinMax: 1
+      MinAddSlopeFalloff: 30
+      MaxAddSlopeFalloff: 30
+      AddSlopeFalloff: 30
+      NoiseTexture: {fileID: 0}
+      Fractal:
+        noiseType: 0
+        seed: 0
+        octaves: 3
+        frequency: 0.03
+        lacunarity: 2
+        persistence: 0.5
+      RangeMin: -0.5
+      RangeMax: 0.5
+      CheckGlobalFractalNoise: 0
+      NoisePreviewTexture: 0
+      RemapNoiseMin: 0
+      RemapNoiseMax: 1
+      Invert: 0
+      SimpleFilterSettingsEditor:
+        viabilitySettingsFoldout: 1
+        additionalNoiseSettingsFoldout: 1
+    SimpleModifyFilterSettings:
+      CheckHeight: 0
+      CheckSlope: 0
+      MinHeight: 0
+      MaxHeight: 0
+      HeightFalloffType: 1
+      HeightFalloffMinMax: 0
+      MinAddHeightFalloff: 20
+      MaxAddHeightFalloff: 20
+      AddHeightFalloff: 20
+      HeightNoiseFractal:
+        noiseType: 0
+        seed: 0
+        octaves: 3
+        frequency: 0.03
+        lacunarity: 2
+        persistence: 0.5
+      HeightNoise: 0
+      _maxRangeNoise: 5
+      _minRangeNoise: 5
+      MinSlope: 0
+      MaxSlope: 20
+      SlopeFalloffType: 1
+      SlopeFalloffMinMax: 1
+      MinAddSlopeFalloff: 30
+      MaxAddSlopeFalloff: 30
+      AddSlopeFalloff: 30
+      NoiseTexture: {fileID: 0}
+      Fractal:
+        noiseType: 0
+        seed: 0
+        octaves: 3
+        frequency: 0.03
+        lacunarity: 2
+        persistence: 0.5
+      RangeMin: -0.5
+      RangeMax: 0.5
+      CheckGlobalFractalNoise: 0
+      NoisePreviewTexture: 0
+      RemapNoiseMin: 0
+      RemapNoiseMax: 1
+      Invert: 0
+      SimpleFilterSettingsEditor:
+        viabilitySettingsFoldout: 1
+        additionalNoiseSettingsFoldout: 1
+    EraseMaskFilterStack:
+      Filters: []
+    MaskFilterStack:
+      Filters: []
+    ModifyMaskFilterStack:
+      Filters: []
+    FilterMaskTexture2D: {fileID: 0}
+  - prefab: {fileID: 8172422769738834540, guid: 1a7a1b4a4f63e7b42b9cd932bd80ff93,
+      type: 3}
+    selected: 0
+    active: 1
+    ID: 95872
+    Extents: {x: 0.313797, y: 0.5414815, z: 0.2524414}
+    AdditionalSpawnSettings:
+      Success: 100
+      SuccessForErase: 100
+      AdditionalSpawnSettingsEditor:
+        success:
+          m_Text: Success (%)
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        successForErase:
+          m_Text: Success of Erase (%)
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+    FailureSettings:
+      Enable: 1
+      FailureRateFromFitness:
+        blendMode: 0
+        keys:
+        - colour: {r: 0, g: 0, b: 0, a: 1}
+          time: 0
+        - colour: {r: 1, g: 1, b: 1, a: 1}
+          time: 1
+      FailureRate: 80
+      FailureSettingsEditor:
+        failureSettingsFoldout: 1
+    OverlapCheckSettings:
+      OverlapShape: 2
+      BoundsCheck:
+        boundsType: 1
+        uniformBoundsSize: 0
+        boundsSize: {x: 1, y: 1, z: 1}
+        multiplyBoundsSize: 1
+      SphereCheck:
+        vegetationMode: 1
+        size: 3.5
+        priority: 0
+        viabilitySize: 4
+        trunkSize: 0.8
+      CollisionCheck:
+        multiplyBoundsSize: 1
+        collisionCheckType: 0
+        checkCollisionLayers:
+          serializedVersion: 2
+          m_Bits: 0
+      "Overlap\u0421heckTypeEditor":
+        "overlap\u0421heckFoldout": 1
+    TransformComponentsStack:
+      TransformComponents: []
+    SimpleFilterSettings:
+      CheckHeight: 0
+      CheckSlope: 0
+      MinHeight: 0
+      MaxHeight: 0
+      HeightFalloffType: 1
+      HeightFalloffMinMax: 0
+      MinAddHeightFalloff: 20
+      MaxAddHeightFalloff: 20
+      AddHeightFalloff: 20
+      HeightNoiseFractal:
+        noiseType: 0
+        seed: 0
+        octaves: 3
+        frequency: 0.03
+        lacunarity: 2
+        persistence: 0.5
+      HeightNoise: 0
+      _maxRangeNoise: 5
+      _minRangeNoise: 5
+      MinSlope: 0
+      MaxSlope: 20
+      SlopeFalloffType: 1
+      SlopeFalloffMinMax: 1
+      MinAddSlopeFalloff: 30
+      MaxAddSlopeFalloff: 30
+      AddSlopeFalloff: 30
+      NoiseTexture: {fileID: 0}
+      Fractal:
+        noiseType: 0
+        seed: 0
+        octaves: 3
+        frequency: 0.03
+        lacunarity: 2
+        persistence: 0.5
+      RangeMin: -0.5
+      RangeMax: 0.5
+      CheckGlobalFractalNoise: 0
+      NoisePreviewTexture: 0
+      RemapNoiseMin: 0
+      RemapNoiseMax: 1
+      Invert: 0
+      SimpleFilterSettingsEditor:
+        viabilitySettingsFoldout: 1
+        additionalNoiseSettingsFoldout: 1
+    SimpleEraseFilterSettings:
+      CheckHeight: 0
+      CheckSlope: 0
+      MinHeight: 0
+      MaxHeight: 0
+      HeightFalloffType: 1
+      HeightFalloffMinMax: 0
+      MinAddHeightFalloff: 20
+      MaxAddHeightFalloff: 20
+      AddHeightFalloff: 20
+      HeightNoiseFractal:
+        noiseType: 0
+        seed: 0
+        octaves: 3
+        frequency: 0.03
+        lacunarity: 2
+        persistence: 0.5
+      HeightNoise: 0
+      _maxRangeNoise: 5
+      _minRangeNoise: 5
+      MinSlope: 0
+      MaxSlope: 20
+      SlopeFalloffType: 1
+      SlopeFalloffMinMax: 1
+      MinAddSlopeFalloff: 30
+      MaxAddSlopeFalloff: 30
+      AddSlopeFalloff: 30
+      NoiseTexture: {fileID: 0}
+      Fractal:
+        noiseType: 0
+        seed: 0
+        octaves: 3
+        frequency: 0.03
+        lacunarity: 2
+        persistence: 0.5
+      RangeMin: -0.5
+      RangeMax: 0.5
+      CheckGlobalFractalNoise: 0
+      NoisePreviewTexture: 0
+      RemapNoiseMin: 0
+      RemapNoiseMax: 1
+      Invert: 0
+      SimpleFilterSettingsEditor:
+        viabilitySettingsFoldout: 1
+        additionalNoiseSettingsFoldout: 1
+    SimpleModifyFilterSettings:
+      CheckHeight: 0
+      CheckSlope: 0
+      MinHeight: 0
+      MaxHeight: 0
+      HeightFalloffType: 1
+      HeightFalloffMinMax: 0
+      MinAddHeightFalloff: 20
+      MaxAddHeightFalloff: 20
+      AddHeightFalloff: 20
+      HeightNoiseFractal:
+        noiseType: 0
+        seed: 0
+        octaves: 3
+        frequency: 0.03
+        lacunarity: 2
+        persistence: 0.5
+      HeightNoise: 0
+      _maxRangeNoise: 5
+      _minRangeNoise: 5
+      MinSlope: 0
+      MaxSlope: 20
+      SlopeFalloffType: 1
+      SlopeFalloffMinMax: 1
+      MinAddSlopeFalloff: 30
+      MaxAddSlopeFalloff: 30
+      AddSlopeFalloff: 30
+      NoiseTexture: {fileID: 0}
+      Fractal:
+        noiseType: 0
+        seed: 0
+        octaves: 3
+        frequency: 0.03
+        lacunarity: 2
+        persistence: 0.5
+      RangeMin: -0.5
+      RangeMax: 0.5
+      CheckGlobalFractalNoise: 0
+      NoisePreviewTexture: 0
+      RemapNoiseMin: 0
+      RemapNoiseMax: 1
+      Invert: 0
+      SimpleFilterSettingsEditor:
+        viabilitySettingsFoldout: 1
+        additionalNoiseSettingsFoldout: 1
+    EraseMaskFilterStack:
+      Filters: []
+    MaskFilterStack:
+      Filters: []
+    ModifyMaskFilterStack:
+      Filters: []
+    FilterMaskTexture2D: {fileID: 0}
+  ProtoGameObjectList: []
+  ProtoTerrainDetailList: []
+  ProtoTerrainTextureList: []
+  BrushSettings:
+    ProceduralMask:
+      Shape: 0
+      Falloff: 0
+      Strength: 100
+      NoiseType: 0
+      Fractal:
+        noiseType: 0
+        seed: 0
+        octaves: 4
+        frequency: 0.0075714285
+        lacunarity: 2
+        persistence: 0.5
+      RangeMin: -0.59827566
+      RangeMax: 0.5966327
+      Seed: 0
+      Octaves: 4
+      Frequency: 0.053
+      Lacunarity: 2
+      Persistence: 0.5
+      FractalNoise: 0
+      RemapMin: 0
+      RemapMax: 1
+      Invert: 0
+      ProceduralMaskEditor:
+        proceduralMaskFoldout: 1
+        additionalNoiseSettingsFoldout: 1
+        proceduralBrushPreviewTextureFoldout: 1
+    CustomMasks:
+      customBrushes: []
+      selectedCustomBrush: 0
+      customMasksEditor:
+        alphaBrushesWindowsScroll: {x: 0, y: 0}
+        alphaBrushesWindowHeight: 100
+    MaskType: 1
+    SpacingMode: 1
+    SpacingEqualsType: 1
+    _brushSpacing: 30
+    BrushJitterSettings:
+      _brushSizeJitter: 0.261
+      _brushScatter: 0
+      brushRotationJitter: 0
+      _brushScatterJitter: 0
+    _brushRotation: 0
+    _brushSize: 13
+    BrushSettingsEditor:
+      brushSettingsFoldout: 1
+  LayerSettings:
+    PaintLayers:
+      serializedVersion: 2
+      m_Bits: 256
+    LayerSettingsEditor:
+      layerSettingsFoldout: 1
+  ScatterSettings:
+    ScatterAlgorithm: 1
+    StamperScatterAlgorithm: 0
+    Grid:
+      VisualOrigin: {x: 18, y: -0.0000000058687797, z: 145.60002}
+      RandomisationType: 2
+      Vastness: 1
+      UniformGrid: 0
+      GridStep: {x: 0.1, y: 0.1}
+      GridAngle: 0
+    RandomPoint:
+      NumberOfChecks: 30
+      OnlyOneCheck: 0
+      MinMaxSlider: 1
+      Instance: 15
+      MinChecks: 15
+      MaxChecks: 15
+    RandomClustered:
+      NumberOfCluster: 30
+      MinMaxRange: 1
+      "MaxCluster\u0421hecks": 300
+      "MinCluster\u0421hecks": 800
+      MaxSeedDistance: 10
+      MinSeedDistance: 30
+    ScatterSettingsEditor:
+      ScatterSettingsFoldout: 1
+  FilterType: 0
+  SpawnSurface: 0
+  TypeParentObject: {fileID: 0}
+  RandomSeed: 0
+  GenerateRandomSeed: 1
+  PrecisionUnit: 0
+  PastPrecisionUnit: 0
+  PrototypeWindowsScroll: {x: 0, y: 90}
+  RenamingName: Default
+  Renaming: 0

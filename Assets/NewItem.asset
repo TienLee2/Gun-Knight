@@ -1,0 +1,98 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-7698330307015696592
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e74c32144565264eb86dc7514aca7f7, type: 3}
+  m_Name: AutoMachine
+  m_EditorClassIdentifier: 
+  m_ID: 0
+  m_CategoryIDs: 5f1cb203
+  m_Description: 
+  m_Capacity: 1
+--- !u!114 &-5258156784975994592
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e74c32144565264eb86dc7514aca7f7, type: 3}
+  m_Name: HandgunBullet
+  m_EditorClassIdentifier: 
+  m_ID: 3
+  m_CategoryIDs: 5f1cb203
+  m_Description: 
+  m_Capacity: 2147483647
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd29761419510c7469e993b29ea117d8, type: 3}
+  m_Name: NewItem
+  m_EditorClassIdentifier: 
+  m_Categories:
+  - {fileID: 3012357565781419314}
+  m_ItemTypes:
+  - {fileID: -7698330307015696592}
+  - {fileID: 1039656793132340869}
+  - {fileID: 395171013209692714}
+  - {fileID: -5258156784975994592}
+--- !u!114 &395171013209692714
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e74c32144565264eb86dc7514aca7f7, type: 3}
+  m_Name: Handgun
+  m_EditorClassIdentifier: 
+  m_ID: 2
+  m_CategoryIDs: 5f1cb203
+  m_Description: 
+  m_Capacity: 1
+--- !u!114 &1039656793132340869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e74c32144565264eb86dc7514aca7f7, type: 3}
+  m_Name: AutoMachineBullet
+  m_EditorClassIdentifier: 
+  m_ID: 1
+  m_CategoryIDs: 5f1cb203
+  m_Description: 
+  m_Capacity: 2147483647
+--- !u!114 &3012357565781419314
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ee2c1a75ff367a42ba5f16bd97e5519, type: 3}
+  m_Name: Items
+  m_EditorClassIdentifier: 
+  m_ID: 62004319

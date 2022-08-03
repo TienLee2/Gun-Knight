@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 936725a01e4cd264aa48d0123dce2cdb, type: 3}
+  m_Name: Shader Bindings
+  m_EditorClassIdentifier: 
+  ShaderInstances:
+  - Name: SyntyStudios/Trees
+    InstancedShader: {fileID: 4800000, guid: 87886ad57ba933c44b128efca79fe422, type: 3}
+    IsOriginalInstanced: 0
+  - Name: SyntyStudios/Vines
+    InstancedShader: {fileID: 4800000, guid: 63fa51b9a2f585d4f94ed046e2e3f344, type: 3}
+    IsOriginalInstanced: 0
+  - Name: SyntyStudios/LOD
+    InstancedShader: {fileID: 4800000, guid: 6e4cb585c4242ca43a35b71d3c73f962, type: 3}
+    IsOriginalInstanced: 0

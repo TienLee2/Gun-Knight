@@ -1,0 +1,340 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-7289842248721882195
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 806b7e7e388685b4b95efe10c5b0ee46, type: 3}
+  m_Name: BrushPaintTool
+  m_EditorClassIdentifier: 
+  Enabled: 0
+  BrushToolEditor:
+    selectTypeSettingsFoldout: 1
+    selectPrototypeSettingsFoldout: 1
+    brushPaintToolSettingsFoldout: 1
+--- !u!114 &-3770107496142739893
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ead9b48a326607a4385cd8f4774466ce, type: 3}
+  m_Name: BrushModifyTool
+  m_EditorClassIdentifier: 
+  Enabled: 0
+  PrefabList: []
+--- !u!114 &-2944690708542884843
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a17105550004f945adf20b1106baf15, type: 3}
+  m_Name: PrecisePlaceTool
+  m_EditorClassIdentifier: 
+  Enabled: 0
+--- !u!114 &-2168446328633714983
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4453c6e469ed32c4d9863540acc4267a, type: 3}
+  m_Name: BrushEraseTool
+  m_EditorClassIdentifier: 
+  Enabled: 0
+  EraseToolEditor:
+    selectTypeSettingsFoldout: 1
+    selectPrototypeSettingsFoldout: 1
+    eraseToolSettingsFoldout: 1
+--- !u!114 &-1556821463281987004
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3039d71397e26345b7c9461bfbbc1da, type: 3}
+  m_Name: EditTool
+  m_EditorClassIdentifier: 
+  Enabled: 0
+  EditToolEditor:
+    _hotkeysFoldout: 1
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68546926876480645a2807ab8ab0b2f3, type: 3}
+  m_Name: General Data Package
+  m_EditorClassIdentifier: 
+  MultipleBrushSettings:
+    ProceduralMask:
+      Shape: 0
+      Falloff: 50
+      Strength: 100
+      NoiseType: 0
+      Fractal:
+        noiseType: 0
+        seed: 0
+        octaves: 3
+        frequency: 0.5
+        lacunarity: 2
+        persistence: 0.5
+      RangeMin: -0.5
+      RangeMax: 0.5
+      Seed: 0
+      Octaves: 4
+      Frequency: 1
+      Lacunarity: 2
+      Persistence: 0.5
+      FractalNoise: 0
+      RemapMin: 0
+      RemapMax: 1
+      Invert: 0
+      ProceduralMaskEditor:
+        proceduralMaskFoldout: 1
+        additionalNoiseSettingsFoldout: 1
+        proceduralBrushPreviewTextureFoldout: 1
+    CustomMasks:
+      customBrushes: []
+      selectedCustomBrush: 0
+      customMasksEditor:
+        alphaBrushesWindowsScroll: {x: 0, y: 0}
+        alphaBrushesWindowHeight: 100
+    MaskType: 1
+    SpacingMode: 1
+    SpacingEqualsType: 1
+    _brushSpacing: 30
+    BrushJitterSettings:
+      _brushSizeJitter: 0
+      _brushScatter: 0
+      brushRotationJitter: 0
+      _brushScatterJitter: 0
+    _brushRotation: 0
+    _brushSize: 100
+    BrushSettingsEditor:
+      brushSettingsFoldout: 1
+  BrushSettingsForErase:
+    ProceduralMask:
+      Shape: 0
+      Falloff: 37
+      Strength: 100
+      NoiseType: 0
+      Fractal:
+        noiseType: 0
+        seed: 0
+        octaves: 3
+        frequency: 0.5
+        lacunarity: 2
+        persistence: 0.5
+      RangeMin: -0.5
+      RangeMax: 0.5
+      Seed: 0
+      Octaves: 4
+      Frequency: 1
+      Lacunarity: 2
+      Persistence: 0.5
+      FractalNoise: 0
+      RemapMin: 0
+      RemapMax: 1
+      Invert: 0
+      ProceduralMaskEditor:
+        proceduralMaskFoldout: 1
+        additionalNoiseSettingsFoldout: 1
+        proceduralBrushPreviewTextureFoldout: 1
+    CustomMasks:
+      customBrushes: []
+      selectedCustomBrush: 0
+      customMasksEditor:
+        alphaBrushesWindowsScroll: {x: 0, y: 0}
+        alphaBrushesWindowHeight: 100
+    MaskType: 1
+    SpacingMode: 1
+    SpacingEqualsType: 1
+    _brushSpacing: 30
+    BrushJitterSettings:
+      _brushSizeJitter: 0
+      _brushScatter: 0
+      brushRotationJitter: 0
+      _brushScatterJitter: 0
+    _brushRotation: 0
+    _brushSize: 200
+    BrushSettingsEditor:
+      brushSettingsFoldout: 1
+  BrushSettingsForModify:
+    ProceduralMask:
+      Shape: 0
+      Falloff: 55
+      Strength: 100
+      NoiseType: 0
+      Fractal:
+        noiseType: 0
+        seed: 0
+        octaves: 3
+        frequency: 0.5
+        lacunarity: 2
+        persistence: 0.5
+      RangeMin: -0.5
+      RangeMax: 0.5
+      Seed: 0
+      Octaves: 4
+      Frequency: 1
+      Lacunarity: 2
+      Persistence: 0.5
+      FractalNoise: 0
+      RemapMin: 0
+      RemapMax: 1
+      Invert: 0
+      ProceduralMaskEditor:
+        proceduralMaskFoldout: 1
+        additionalNoiseSettingsFoldout: 1
+        proceduralBrushPreviewTextureFoldout: 1
+    CustomMasks:
+      customBrushes: []
+      selectedCustomBrush: 0
+      customMasksEditor:
+        alphaBrushesWindowsScroll: {x: 0, y: 0}
+        alphaBrushesWindowHeight: 100
+    MaskType: 1
+    SpacingMode: 1
+    SpacingEqualsType: 1
+    _brushSpacing: 30
+    BrushJitterSettings:
+      _brushSizeJitter: 0
+      _brushScatter: 0
+      brushRotationJitter: 0
+      _brushScatterJitter: 0
+    _brushRotation: 0
+    _brushSize: 105
+    BrushSettingsEditor:
+      brushSettingsFoldout: 1
+  EditSettings:
+    ObjectMouseModify:
+      ObjectMouseMoveAlongDirectionSettings:
+        _mouseSensitivity: 0.2
+      ObjectMouseUniformScaleSettings:
+        _mouseSensitivity: 0.2
+      ObjectMouseRotationSettings:
+        _mouseSensitivity: 1
+    PrecisionModifyMode: 1
+    PositionMode: 0
+    PositionTool: 0
+    RotationTool: 0
+    ScaleTool: 0
+    SphereSize: 10
+    MaxDistance: 30
+    RaycastPositionOffset: 0
+    GroundLayers:
+      serializedVersion: 2
+      m_Bits: 256
+  PresitionPlaceSettings:
+    SelectType: 1
+    ObjectMousePrecision:
+      ObjectMouseUniformScale:
+        objectMouseUniformScaleSettings:
+          _mouseSensitivity: 0.2
+      ObjectMouseRotation:
+        objectMouseRotationSettings:
+          _mouseSensitivity: 1
+      ObjectMouseMoveAlongDirection:
+        objectMouseMoveAlongDirectionSettings:
+          _mouseSensitivity: 0.2
+    Spacing: 5
+    RandomiseTransform: 1
+    OverlapCheck: 1
+    EnableFilter: 1
+    FilterVisualisationSize: 10
+    VisualizeOverlapCheckSettings: 0
+    VisualizeFilterSettings: 0
+    AlignAxis: 1
+    AlignmentAxis: 2
+    WeightToNormal: 1
+    AlongStroke: 0
+  PinToolSettings:
+    Offset: 0
+    RotationTransformMode: 0
+    FromDirection: 0
+    WeightToNormal: 1
+    SnapRotationValue: 30
+    FixedRotationValue: {x: 0, y: 0, z: 0}
+    ScaleTransformMode: 0
+    FixedScaleValue: {x: 0, y: 0, z: 0}
+    SnapScaleValue: 0.3
+  BrushModifyToolSettings:
+    ModifyTransformComponentsStack:
+      TransformComponents:
+      - {fileID: 7332918222879893614}
+    ModifyByLayer: 0
+    ModifyLayers:
+      serializedVersion: 2
+      m_Bits: 0
+    ModifySettingsEditor:
+      modifyToolFoldout: 1
+  ToolComponentsStack:
+    Tools:
+    - {fileID: -7289842248721882195}
+    - {fileID: -2168446328633714983}
+    - {fileID: 7477016516522721175}
+    - {fileID: -2944690708542884843}
+    - {fileID: -1556821463281987004}
+    - {fileID: -3770107496142739893}
+  TransformSpace: 0
+  EnableUndoForGameObject: 1
+  CellSize: 100
+  TextureTargetStrength: 1
+  DragFailureRate: 0
+  EraseStrength: 1
+  GameObjectControllerEditor:
+    gameObjectControllerFoldout: 1
+  ShowCells: 0
+--- !u!114 &7332918222879893614
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72f462d80b734eb41a05ac58f4d7a5dc, type: 3}
+  m_Name: VegetationRotation
+  m_EditorClassIdentifier: 
+  Enabled: 1
+  FoldoutGUI: 1
+  StrengthY: 8.6
+  StrengthXY: 5.4
+  RotationXZ: 0.83
+--- !u!114 &7477016516522721175
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea7f42a4bb786ed40ae65a3547134733, type: 3}
+  m_Name: PinTool
+  m_EditorClassIdentifier: 
+  Enabled: 0
